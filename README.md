@@ -1,0 +1,1 @@
+# net5_rabbitmq_lab
