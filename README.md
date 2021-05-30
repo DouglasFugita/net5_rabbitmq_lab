@@ -62,7 +62,9 @@ dotnet run --project basic_worker_demo/Worker/
  [x] Done after 10000 ms
 ```
 
-# Basic Exchange Fanout Demo
+## Basic Exchange Fanout Demo
+Based in RabbitMQ Tutorial: https://www.rabbitmq.com/tutorials/tutorial-three-dotnet.html
+
 2 Receivers Terminal:
 ```
 dotnet run --project basic_exchange_fanout_demo/ReceiveLogs/
