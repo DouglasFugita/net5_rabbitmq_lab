@@ -62,7 +62,15 @@ dotnet run --project basic_worker_demo/Worker/
  [x] Done after 10000 ms
 ```
 
-
+# Basic Exchange Fanout Demo
+2 Receivers Terminal:
+```
+dotnet run --project basic_exchange_fanout_demo/ReceiveLogs/
+```
+1 Emitter Terminal:
+```
+dotnet run --project basic_exchange_fanout_demo/EmitLog/
+```
 
 ## Resources:
 - https://www.rabbitmq.com/
