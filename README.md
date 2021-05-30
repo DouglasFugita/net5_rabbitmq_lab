@@ -74,5 +74,27 @@ dotnet run --project basic_exchange_fanout_demo/ReceiveLogs/
 dotnet run --project basic_exchange_fanout_demo/EmitLog/
 ```
 
+
+## Basic Exchange Direct Demo
+Based in RabbitMQ Tutorial: https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html
+
+First Receiver Terminal (Warning and Error Messages)
+```
+dotnet run warning error --project basic_exchange_direct_demo/ReceiveLogsDirect/
+```
+Second Receiver Terminal (Info messages)
+```
+dotnet run info --project basic_exchange_direct_demo/ReceiveLogsDirect/
+```
+Emitter Terminal
+```
+dotnet run error "Run. Run. Or it will explode." --project basic_exchange_direct_demo/EmitLogDirect/
+dotnet run warning "Just a warning... But its a warning." --project basic_exchange_direct_demo/EmitLogDirect/
+dotnet run info "Info! Info! Info!" --project basic_exchange_direct_demo/EmitLogDirect/
+```
+
+
+
+
 ## Resources:
 - https://www.rabbitmq.com/
