@@ -92,8 +92,32 @@ dotnet run error "Run. Run. Or it will explode." --project basic_exchange_direct
 dotnet run warning "Just a warning... But its a warning." --project basic_exchange_direct_demo/EmitLogDirect/
 dotnet run info "Info! Info! Info!" --project basic_exchange_direct_demo/EmitLogDirect/
 ```
+## Basic Exchange Topic Demo
+Based in RabbitMQ Tutorial: https://www.rabbitmq.com/tutorials/tutorial-five-dotnet.html
 
-
+Receiver Terminal to receive all messages:
+```
+dotnet run "#" --project basic_exchange_topic_demo/ReceiveLogsTopic/
+```
+Receiver Terminal to receive logs from 'kern'
+```
+dotnet run "kern.*" --project basic_exchange_topic_demo/ReceiveLogsTopic/
+```
+Receiver Terminal to receive 'critical' logs
+```
+dotnet run "*.critical" --project basic_exchange_topic_demo/ReceiveLogsTopic/
+```
+Receiver Terminal to multiple bindings
+```
+dotnet run "kern.critical" "*.info" --project basic_exchange_topic_demo/ReceiveLogsTopic/
+```
+Emitter Terminal
+```
+dotnet run "kern.critical" "Critical Kernel Error" --project basic_exchange_topic_demo/EmitLogTopic/
+dotnet run "kern.warning" "Kernel Warning" --project basic_exchange_topic_demo/EmitLogTopic/
+dotnet run "cron.critical" "Critical Cron Error" --project basic_exchange_topic_demo/EmitLogTopic/
+dotnet run "cron.info" "Cron Info" --project basic_exchange_topic_demo/EmitLogTopic/
+```
 
 
 ## Resources:
