@@ -119,6 +119,15 @@ dotnet run "cron.critical" "Critical Cron Error" --project basic_exchange_topic_
 dotnet run "cron.info" "Cron Info" --project basic_exchange_topic_demo/EmitLogTopic/
 ```
 
+## Basic ReplyTo Demo
+RPC Server
+```
+dotnet run --project basic_replyQueue_RPC_demo/RPCServer/
+```
+RPC Client
+```
+dotnet run --project basic_replyQueue_RPC_demo/RPCClient/
+```
 
 ## Resources:
 - https://www.rabbitmq.com/
